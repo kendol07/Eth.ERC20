@@ -6,7 +6,7 @@ use Bezhanov\Ethereum\Converter;
 use Binance\Utils;
 use Binance\Formatter;
 
-//$bigInteger = new BigInteger();
+
 $utils = new Utils();
 $Formatter=new Utils();
 
@@ -26,32 +26,7 @@ class EthereumTransaction
         $hexValue = Utils::toHex($value);
         return $hexValue;
     }
-    //Metodo para codificar Hex
-    /*public function encodeNumberToHex($number)
-    {
-        $bigInteger = new BigInteger($number);
-        $hexadecimal = $bigInteger->toHex();
-        return $hexadecimal;
-    }
-
-    // Función para calcular el hash keccak256
-    private function keccak256(string $input): string
-    {
-        return hash('sha3-256', $input);
-    }
-
-    // Función para codificar los parámetros ABI
-    private function abiEncode(string $functionSignature, array $parameters): string
-    {
-        $encodedFunctionSignature = substr($this->keccak256($functionSignature), 0, 8);
-        $encodedParameters = "";
-
-        foreach ($parameters as $parameter) {
-            $encodedParameters .= str_pad(substr($parameter, 2), 64, "0", STR_PAD_LEFT);
-        }
-
-        return "0x" . $encodedFunctionSignature . $encodedParameters;
-    }*/
+   
 
     // Función para obtener el precio del gas
     private function getGasPrice(): string
